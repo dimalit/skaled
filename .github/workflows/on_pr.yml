@@ -6,6 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Add some useful instructions to PR creator
     steps:
+      - uses: actions/checkout@v1
       - uses: allthatjazzleo/actions-pull-request-add-comment@master
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
