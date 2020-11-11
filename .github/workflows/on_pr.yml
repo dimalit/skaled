@@ -1,3 +1,5 @@
+name: Comment in PR
+
 on:
   pull_request:
     types: [opened]
@@ -10,9 +12,9 @@ jobs:
       - uses: allthatjazzleo/actions-pull-request-add-comment@master
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          message: >
-            "SUGGESTION:
+          message: |
+            SUGGESTION!
             1. Build custom container here: https://github.com/skalenetwork/skaled/actions?query=workflow%3A%22Custom+Docker+and+Binary%22
             2. Test it here: https://github.com/skalenetwork/skale-ci-integration_tests/actions?query=workflow%3A%22Skaled+Nightly+Tests%22
-            "
+
     
